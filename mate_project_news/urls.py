@@ -17,12 +17,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
-# from newspaper.views import register, PostSearchView
+from newspaper.views import register, PostSearchView
 
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("", include("newspaper.urls")),
-    # path("register/", register, name="register"),
+    path("register/", register, name="register"),
     path("accounts/", include("django.contrib.auth.urls")),
-    # path("search/", PostSearchView.as_view(), name="post-search"),
+    path("search/", PostSearchView.as_view(), name="posts-search"),
 ]

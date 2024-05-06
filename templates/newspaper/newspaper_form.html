@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% load crispy_forms_filters %}
+{% block title %}
+  <title>{% if object %}Update{% else %}Create{% endif %} post | {{ newspaper.title }}</title>
+{% endblock title %}
+{% load crispy_forms_tags %}
+{% block content %}
+  <div class="container mt-5">
+    <div class="mt-7"></div>
+    <h1>{{ object|yesno:"Update,Create" }} post.</h1>
+    <form action="" method="post" novalidate class="mt-4" enctype="multipart/form-data">
+      {% csrf_token %}
+      {{ form|crispy }}
+      <div class="mt-4"></div>
+      <button type="submit" class="btn btn-success">Submit</button>
+    </form>
+  </div>
+  <style>
+      .mt-2-fields {
+          margin-top: 1rem;
+      }
+  </style>
+  <script>
+      document.addEventListener('DOMContentLoaded', function () {
+          var formGroups = document.querySelectorAll('.form-group');
+          formGroups.forEach(function (group) {
+              group.classList.add('mt-2-fields');
+          });
+      });
+  </script>
+{% endblock %}
+

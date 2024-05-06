@@ -2,7 +2,7 @@ from django import forms
 
 from django.contrib.auth.forms import UserCreationForm
 
-from newspaper.models import Redactor, Topic, Newspaper
+from newspaper.models import Redactor, Topic, Newspaper, ContactForm
 
 
 class RegistrationForm(UserCreationForm):
@@ -39,4 +39,10 @@ class TopicForm(forms.ModelForm):
 class TopicUpdateForm(forms.ModelForm):
     class Meta:
         model = Topic
-        fields = ["name",]
+        fields = ["name", ]
+
+
+class ContactFormForm(forms.ModelForm):
+    class Meta:
+        model = ContactForm
+        fields = ['name', 'email', 'message']

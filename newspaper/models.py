@@ -41,7 +41,8 @@ class Topic(models.Model):
 class Newspaper(models.Model):
     title = models.CharField(max_length=255, unique=True)
     content = models.TextField()
-    published_date = models.DateTimeField()
+    image_url = models.URLField(blank=True, null=True)
+    published_date = models.DateTimeField(auto_now_add=True)
     topics = models.ManyToManyField(Topic, related_name="newspapers")
     publishers = models.ManyToManyField(Redactor, related_name="newspapers", blank=True)
 
@@ -50,3 +51,16 @@ class Newspaper(models.Model):
 
     def __str__(self):
         return self.title
+
+    def get_publishers(self):
+        return ", ".join(
+            f"{redactor.username}"
+            for redactor in self.publishers.all()
+        )
+
+
+class ContactForm(models.Model):
+    name = models.CharField(max_length=100)
+    email = models.EmailField()
+    message = models.TextField()
+    submitted_at = models.DateTimeField(auto_now_add=True)

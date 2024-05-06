@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% load crispy_forms_filters %}
+{% block title %}
+  <title>Delete post | {{ newspaper.title }}</title>
+{% endblock title %}
+{% load crispy_forms_tags %}
+{% block content %}
+  <div class="mt-7"></div>
+  <h1>Delete post: <p style="font-size: 24px;">{{ newspaper.title }}</p></h1>
+  <form action="" method="post">
+    {% csrf_token %}
+    <input type="submit" value="Yes" class="btn btn-danger btn-lg">
+  </form>
+{% endblock %}
