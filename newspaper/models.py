@@ -64,3 +64,8 @@ class ContactForm(models.Model):
     email = models.EmailField()
     message = models.TextField()
     submitted_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return (f"{self.name} {self.email}"
+                f"{self.message}"
+                f"{self.submitted_at}")
