@@ -22,18 +22,10 @@
           </tr>
           </thead>
           <tbody>
-          {% for post in topic.newspaper.all %}
+          {% for post in topic.newspapers.all %}
             <tr>
               <td class="mt-4">{{ post.title }}</td>
               <td>{{ post.get_publishers }}</td>
-              {% if user.is_authenticated and user.is_staff %}
-                <td>
-                  <form action="{% url 'newspaper:delete-topic-from-newspaper' post.pk topic.pk %}" method="post">
-                    {% csrf_token %}
-                    <button type="submit" class="btn btn-danger btn-sm">DELETE</button>
-                  </form>
-                </td>
-              {% endif %}
             </tr>
           {% endfor %}
           </tbody>
