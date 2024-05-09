@@ -1,0 +1,818 @@
+[
+  {
+    "model": "auth.permission",
+    "pk": 1,
+    "fields": {
+      "name": "Can add log entry",
+      "content_type": 1,
+      "codename": "add_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 2,
+    "fields": {
+      "name": "Can change log entry",
+      "content_type": 1,
+      "codename": "change_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 3,
+    "fields": {
+      "name": "Can delete log entry",
+      "content_type": 1,
+      "codename": "delete_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 4,
+    "fields": {
+      "name": "Can view log entry",
+      "content_type": 1,
+      "codename": "view_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 5,
+    "fields": {
+      "name": "Can add permission",
+      "content_type": 2,
+      "codename": "add_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 6,
+    "fields": {
+      "name": "Can change permission",
+      "content_type": 2,
+      "codename": "change_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 7,
+    "fields": {
+      "name": "Can delete permission",
+      "content_type": 2,
+      "codename": "delete_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 8,
+    "fields": {
+      "name": "Can view permission",
+      "content_type": 2,
+      "codename": "view_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 9,
+    "fields": {
+      "name": "Can add group",
+      "content_type": 3,
+      "codename": "add_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 10,
+    "fields": {
+      "name": "Can change group",
+      "content_type": 3,
+      "codename": "change_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 11,
+    "fields": {
+      "name": "Can delete group",
+      "content_type": 3,
+      "codename": "delete_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 12,
+    "fields": {
+      "name": "Can view group",
+      "content_type": 3,
+      "codename": "view_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 13,
+    "fields": {
+      "name": "Can add content type",
+      "content_type": 4,
+      "codename": "add_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 14,
+    "fields": {
+      "name": "Can change content type",
+      "content_type": 4,
+      "codename": "change_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 15,
+    "fields": {
+      "name": "Can delete content type",
+      "content_type": 4,
+      "codename": "delete_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 16,
+    "fields": {
+      "name": "Can view content type",
+      "content_type": 4,
+      "codename": "view_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 17,
+    "fields": {
+      "name": "Can add session",
+      "content_type": 5,
+      "codename": "add_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 18,
+    "fields": {
+      "name": "Can change session",
+      "content_type": 5,
+      "codename": "change_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 19,
+    "fields": {
+      "name": "Can delete session",
+      "content_type": 5,
+      "codename": "delete_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 20,
+    "fields": {
+      "name": "Can view session",
+      "content_type": 5,
+      "codename": "view_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 21,
+    "fields": {
+      "name": "Can add topic",
+      "content_type": 6,
+      "codename": "add_topic"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 22,
+    "fields": {
+      "name": "Can change topic",
+      "content_type": 6,
+      "codename": "change_topic"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 23,
+    "fields": {
+      "name": "Can delete topic",
+      "content_type": 6,
+      "codename": "delete_topic"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 24,
+    "fields": {
+      "name": "Can view topic",
+      "content_type": 6,
+      "codename": "view_topic"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 25,
+    "fields": {
+      "name": "Can add redactor",
+      "content_type": 7,
+      "codename": "add_redactor"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 26,
+    "fields": {
+      "name": "Can change redactor",
+      "content_type": 7,
+      "codename": "change_redactor"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 27,
+    "fields": {
+      "name": "Can delete redactor",
+      "content_type": 7,
+      "codename": "delete_redactor"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 28,
+    "fields": {
+      "name": "Can view redactor",
+      "content_type": 7,
+      "codename": "view_redactor"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 29,
+    "fields": {
+      "name": "Can add newspaper",
+      "content_type": 8,
+      "codename": "add_newspaper"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 30,
+    "fields": {
+      "name": "Can change newspaper",
+      "content_type": 8,
+      "codename": "change_newspaper"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 31,
+    "fields": {
+      "name": "Can delete newspaper",
+      "content_type": 8,
+      "codename": "delete_newspaper"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 32,
+    "fields": {
+      "name": "Can view newspaper",
+      "content_type": 8,
+      "codename": "view_newspaper"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 33,
+    "fields": {
+      "name": "Can add contact form",
+      "content_type": 9,
+      "codename": "add_contactform"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 34,
+    "fields": {
+      "name": "Can change contact form",
+      "content_type": 9,
+      "codename": "change_contactform"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 35,
+    "fields": {
+      "name": "Can delete contact form",
+      "content_type": 9,
+      "codename": "delete_contactform"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 36,
+    "fields": {
+      "name": "Can view contact form",
+      "content_type": 9,
+      "codename": "view_contactform"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 1,
+    "fields": {
+      "app_label": "admin",
+      "model": "logentry"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 2,
+    "fields": {
+      "app_label": "auth",
+      "model": "permission"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 3,
+    "fields": {
+      "app_label": "auth",
+      "model": "group"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 4,
+    "fields": {
+      "app_label": "contenttypes",
+      "model": "contenttype"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 5,
+    "fields": {
+      "app_label": "sessions",
+      "model": "session"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 6,
+    "fields": {
+      "app_label": "newspaper",
+      "model": "topic"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 7,
+    "fields": {
+      "app_label": "newspaper",
+      "model": "redactor"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 8,
+    "fields": {
+      "app_label": "newspaper",
+      "model": "newspaper"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 9,
+    "fields": {
+      "app_label": "newspaper",
+      "model": "contactform"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "h0gm16gy6lbechjwcmdokrvcmo2mk0j8",
+    "fields": {
+      "session_data": ".eJxVjEEOwiAQAP_C2ZBCYRc8eu8byFIWWzWQlPZk_Lsh6UGvM5N5i0DHvoSj8RbWJK5CicsvizQ_uXSRHlTuVc617NsaZU_kaZucauLX7Wz_Bgu1pW_tGNH4OaIfSEH2yOQAIkUG1GiS9YZsTnpQ7MjRmBWMoDQjG4sM4vMF2Gs3hQ:1s55kj:LHa3wsje-VoGSUO6HFU_ZM-YF-MIwCjIAWcmdbI74IQ",
+      "expire_date": "2024-05-23T15:32:13.448Z"
+    }
+  },
+  {
+    "model": "newspaper.redactor",
+    "pk": 1,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$i8LNqqMdAXOEGTQnd8F16r$25j+9b7bsmJX1zVMR3Sy/sRqi8LZUbzrEiFnkWKzz3A=",
+      "last_login": "2024-05-09T15:32:13.444Z",
+      "is_superuser": true,
+      "username": "qwe",
+      "first_name": "",
+      "last_name": "",
+      "email": "qwe@gmail.com",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2024-05-09T13:46:22.260Z",
+      "years_of_experience": null,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "newspaper.redactor",
+    "pk": 2,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$9JykfJHdFftV8k4INkh0Ci$LadrGj25HJkok2w21gVoF4ySYdzdvzY/Arz1e28lTmA=",
+      "last_login": "2024-05-09T13:52:37.683Z",
+      "is_superuser": false,
+      "username": "D1st3f",
+      "first_name": "Dmytro",
+      "last_name": "Purih",
+      "email": "purih@gmail.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2024-05-09T13:52:37.492Z",
+      "years_of_experience": null,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "newspaper.redactor",
+    "pk": 3,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$g2nw7hdH5WFpWV8IRXBfEZ$R24XrxmVqmTi0WSfzAEYT5QH8R7CzcalMsAMGa5auI0=",
+      "last_login": "2024-05-09T13:53:22.942Z",
+      "is_superuser": false,
+      "username": "s1were",
+      "first_name": "Vlad",
+      "last_name": "Shevchuk",
+      "email": "shevchuk@ukr.net",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2024-05-09T13:53:22.749Z",
+      "years_of_experience": null,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "newspaper.redactor",
+    "pk": 4,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$aaDYvTRXZY4YrsggnI7ATZ$DtASE47LY0B1fe8lCd3Ism1IGDHdC+S80Tj4GMcg8IA=",
+      "last_login": "2024-05-09T13:53:51.032Z",
+      "is_superuser": false,
+      "username": "Sparco",
+      "first_name": "Mihail",
+      "last_name": "Shevchuk",
+      "email": "misha@gmail.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2024-05-09T13:53:50.829Z",
+      "years_of_experience": null,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "newspaper.redactor",
+    "pk": 5,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$gWzohJQgpKRadho8j1FB9G$TXk3AOne4e7eWSkSjEw7BeBw4u+aFonuErs2yPGG5M4=",
+      "last_login": "2024-05-09T13:54:25.022Z",
+      "is_superuser": false,
+      "username": "yonch1",
+      "first_name": "Vanya",
+      "last_name": "Runboost",
+      "email": "vanya@gmai.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2024-05-09T13:54:24.828Z",
+      "years_of_experience": null,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "newspaper.topic",
+    "pk": 1,
+    "fields": {
+      "name": "Na`Vi"
+    }
+  },
+  {
+    "model": "newspaper.topic",
+    "pk": 2,
+    "fields": {
+      "name": "CS2"
+    }
+  },
+  {
+    "model": "newspaper.topic",
+    "pk": 3,
+    "fields": {
+      "name": "Liquid"
+    }
+  },
+  {
+    "model": "newspaper.topic",
+    "pk": 4,
+    "fields": {
+      "name": "Tranfers"
+    }
+  },
+  {
+    "model": "newspaper.topic",
+    "pk": 5,
+    "fields": {
+      "name": "LCS"
+    }
+  },
+  {
+    "model": "newspaper.topic",
+    "pk": 6,
+    "fields": {
+      "name": "eSport"
+    }
+  },
+  {
+    "model": "newspaper.topic",
+    "pk": 7,
+    "fields": {
+      "name": "ESL Pro League"
+    }
+  },
+  {
+    "model": "newspaper.topic",
+    "pk": 8,
+    "fields": {
+      "name": "Benched players"
+    }
+  },
+  {
+    "model": "newspaper.topic",
+    "pk": 9,
+    "fields": {
+      "name": "Apex Legends"
+    }
+  },
+  {
+    "model": "newspaper.topic",
+    "pk": 10,
+    "fields": {
+      "name": "VP"
+    }
+  },
+  {
+    "model": "newspaper.topic",
+    "pk": 11,
+    "fields": {
+      "name": "Ukraine"
+    }
+  },
+  {
+    "model": "newspaper.topic",
+    "pk": 12,
+    "fields": {
+      "name": "USA"
+    }
+  },
+  {
+    "model": "newspaper.topic",
+    "pk": 13,
+    "fields": {
+      "name": "Malta"
+    }
+  },
+  {
+    "model": "newspaper.topic",
+    "pk": 14,
+    "fields": {
+      "name": "China"
+    }
+  },
+  {
+    "model": "newspaper.topic",
+    "pk": 15,
+    "fields": {
+      "name": "Australia"
+    }
+  },
+  {
+    "model": "newspaper.topic",
+    "pk": 16,
+    "fields": {
+      "name": "Europe"
+    }
+  },
+  {
+    "model": "newspaper.topic",
+    "pk": 17,
+    "fields": {
+      "name": "CS:GO"
+    }
+  },
+  {
+    "model": "newspaper.topic",
+    "pk": 18,
+    "fields": {
+      "name": "Faze Clan"
+    }
+  },
+  {
+    "model": "newspaper.topic",
+    "pk": 19,
+    "fields": {
+      "name": "GTA6"
+    }
+  },
+  {
+    "model": "newspaper.newspaper",
+    "pk": 1,
+    "fields": {
+      "title": "No cheaters in 15 Premier games",
+      "content": "My group of five have encountered no obvious cheaters in the last 15 games (friday-monday) on EU servers.\r\n\r\nOur average elo has been 17-18k. The only annoying part has been playing against a super large range of players. Encountered some 3k+ faceit players and some very new players. I guess distributing ranks in nob-cheater environment will take a while.",
+      "image_url": "",
+      "published_date": "2024-05-09T15:33:04.019Z",
+      "topics": [
+        2,
+        6
+      ],
+      "publishers": [
+        3
+      ]
+    }
+  },
+  {
+    "model": "newspaper.newspaper",
+    "pk": 2,
+    "fields": {
+      "title": "The first 10 QUALIFIED Teams for #ALGS Split 1 MATCH POINT FINALS!!!",
+      "content": "1. Fnatic \r\n2. Reject Winnity \r\n3. Serenity\r\n4. DarkZero\r\n5. 2Rats1controller\r\n6. Liquid Alienware\r\n7. Aurora\r\n8. Not Moist\r\n9. Virtus Pro\r\n10. o7\r\n\r\nCONGRATULATIONS TO ALL TEAMS!!!",
+      "image_url": "https://pbs.twimg.com/media/GMxu9IybEAE69CZ?format=jpg&name=small",
+      "published_date": "2024-05-09T15:35:36.940Z",
+      "topics": [
+        9,
+        16,
+        10,
+        6
+      ],
+      "publishers": [
+        2
+      ]
+    }
+  },
+  {
+    "model": "newspaper.newspaper",
+    "pk": 3,
+    "fields": {
+      "title": "ALGS 2024 Split 1 Playoffs: Lower bracket",
+      "content": "Following an unsuccessful performance in the group stage, NAVI Apex Legends team has to fight for survival in the lower bracket of the ALGS: 2024 Split 1 Playoffs.\r\n\r\nThe losers' first-round matches begin today at 19:00 CET. Participants will battle six times: three on the World's Edge map and the rest on Storm Point. To advance to the next round, the team must place among the tournament's top ten based on the match results.\r\n\r\nIf NAVI players accomplish this task, they will move on to the lower bracket second round, which takes place the night after the first (starts on Sunday at 04:00 CET). If it doesn't go their way, the team will leave the tournament.\r\n\r\nSupport our guys during the livestream!",
+      "image_url": "https://d3dwep9z8m8y9r.cloudfront.net/publications/2024/05/publications-10863/thumbnail/46500/23.png",
+      "published_date": "2024-05-09T15:36:27.247Z",
+      "topics": [
+        9,
+        6
+      ],
+      "publishers": [
+        2,
+        4
+      ]
+    }
+  },
+  {
+    "model": "newspaper.newspaper",
+    "pk": 4,
+    "fields": {
+      "title": "NAVI x PUMA pro kit 2024",
+      "content": "Get ready to see NAVI like you�ve never seen them before. In collaboration with PUMA, we're excited to drop the �Beyond Black and Yellow� Pro Kit for 2024, a fresh twist on our classic look that�s as bold as our gameplay.\r\n\r\nWhy stick to black and yellow when the game offers a whole palette? NAVI�s latest kit plays with a new spectrum of colors that reflects the vibrant lives and personalities of our 20 million fans worldwide. It�s about showing off our true colors, both in and out of the arena. This kit isn�t just something you wear � it�s a part of who you are.\r\n\r\nDesigned with PUMA�s cutting-edge technology, this kit is built for action and crafted to handle everything from sweat-drenched matches to victory celebrations. It's durable, it�s dynamic, and it screams NAVI spirit.\r\n\r\nThe slogan �Game Makes Us More� isn�t just a catchphrase; it�s our belief. It�s about how the game enhances our lives, sharpens our skills, and deepens our friendships.\r\n\r\nReady to gear up? NAVI x PUMA Pro Kit 2024 is now available at NAVI�s official online store and PUMA stores from May 1. Check it out and bring more game to your wardrobe.",
+      "image_url": "https://d3dwep9z8m8y9r.cloudfront.net/publications/2024/04/publications-10853/thumbnail/46333/ws-news-1738x800.png",
+      "published_date": "2024-05-09T15:37:19.876Z",
+      "topics": [
+        1,
+        11,
+        6
+      ],
+      "publishers": [
+        3,
+        5
+      ]
+    }
+  },
+  {
+    "model": "newspaper.newspaper",
+    "pk": 5,
+    "fields": {
+      "title": "Dust 2 returns to the CS competitive map pool",
+      "content": "This evening, Valve has released a major update to CS2, with further improvements and optimizations to the game. The changes have also affected competitive Counter-Strike, as Dust 2 has returned to the map pool, replacing Overpass.\r\n\r\nFor Born to Win, these changes are positive. In the last three months, our team has only played twice on Overpass, and we scored a win against BetBoom at the PGL Major Copenhagen 2024 Europe RMR A (13 : 4).\r\n\r\nIn 2022, Dust 2 was one of the best NAVI maps: In eighteen matches, our team was defeated only three times and finished the year with 83.3% of victories on this map.\r\n\r\nIt should be noted that the ESL Pro League S19 will be played on the previous update, so we can expect a few farewell Overpass games from NAVI!",
+      "image_url": "https://d3dwep9z8m8y9r.cloudfront.net/publications/2024/04/publications-10848/thumbnail/46261/Site_1738x800.png",
+      "published_date": "2024-05-09T15:41:11.209Z",
+      "topics": [
+        2,
+        17,
+        1
+      ],
+      "publishers": [
+        5
+      ]
+    }
+  },
+  {
+    "model": "newspaper.newspaper",
+    "pk": 6,
+    "fields": {
+      "title": "NAVI Youth - Champions of United21 Season 12: Division 2",
+      "content": "The United21 Season 12: Division 2 tournament is over. Our CS2 team NAVI Youth became the champion of the competition and won $2,000. In addition to the cash prize, Born to Win also received an invitation to the first division of United21 Season 15.\r\n\r\nIn the tournament's Grand Final, NAVI Youth easily defeated 777 Esports with a score of 2 : 0, who they had lost to in the group stage.\r\nIt should be noted that this was the only defeat that our junior roster had to accept in the championship. First Born to Win defeated Sashi Academy (2 : 1) in the deciding match of Group D, and then quickly moved to the top of the playoff bracket by defeating Metizport X (2 : 0), Preasy Rising (2 : 0), and SINNERS Academy (2 : 0).\r\n\r\nCongratulations to the team on their first major victory! NAVI Youth's next games will take place in the 49th season of the ESEA League Main Division. Check out the schedule on our website.",
+      "image_url": "https://pbs.twimg.com/media/GKbMdyeXkAAmQ9r.jpg",
+      "published_date": "2024-05-09T15:43:14.046Z",
+      "topics": [
+        1,
+        11,
+        6
+      ],
+      "publishers": [
+        4
+      ]
+    }
+  },
+  {
+    "model": "newspaper.newspaper",
+    "pk": 7,
+    "fields": {
+      "title": "Real gaming is back",
+      "content": "Here we go again.\r\nWatch Grand Theft Auto VI Trailer 1 Now on YouTube: https://youtube.com/watch?v=QdBZY2fkU-0",
+      "image_url": "https://pbs.twimg.com/media/GAlso7OWUAAkZPk?format=jpg&name=small",
+      "published_date": "2024-05-09T15:46:38.631Z",
+      "topics": [
+        19
+      ],
+      "publishers": [
+        4,
+        1
+      ]
+    }
+  },
+  {
+    "model": "newspaper.newspaper",
+    "pk": 8,
+    "fields": {
+      "title": "NAVI returns to Apex Legends",
+      "content": "NAVI esports club is returning to Apex Legends. Orgless and Hungry, formerly known as Vexed Gaming, will now perform under the club's banner. The team is made up of experienced players who have been performing professionally for quite a while - MaTaFe, Tyler, and KIND4.\r\n\r\nOrgless and Hungry have consistently shown excellent results in the EMEA regional competition: they became silver medalists of the last ALGS 2023 Split Pro League, and they are holding on to the second place in the tournament table this season.\r\n\r\nThe first NAVI matches in Apex Legends will take place on March 10. This day will determine 20 teams to play in the finals of the Split 2 Pro League. Don't miss the broadcast, and support our team!\r\n\r\nNAVI Apex Legends roster:\r\nsiMatej 'MaTaFe' Fekonja\r\ngbTyler 'Tyler' Wood \r\nesPedro 'KIND4' Maldonado Vega",
+      "image_url": "https://d3dwep9z8m8y9r.cloudfront.net/publications/2024/03/publications-10732/thumbnail/45086/Site_1738x800.png",
+      "published_date": "2024-05-09T15:52:53.261Z",
+      "topics": [
+        9,
+        16,
+        1,
+        11,
+        6
+      ],
+      "publishers": [
+        2,
+        5
+      ]
+    }
+  },
+  {
+    "model": "newspaper.newspaper",
+    "pk": 9,
+    "fields": {
+      "title": "NAVI Team Capsule: What's inside?",
+      "content": "The first match of the season for the NAVI VALORANT team is over! Our team has already scored their first victory and advanced to the Group B final.\r\n\r\nThis is the best time for you to support the team on their way to their first Masters of the season. You can buy a NAVI capsule including gun buddy, spray, banner and skin on Classic in our club's recognizable yellow and black colors at VALORANT today. The cost of the set is 2340 VP.\r\n\r\nNavi Team Capsule In Valorant. \r\n\r\nIf you need an extra reason to buy this kit, then watch the video below to see how our players have been preparing for the announcement of the capsule!",
+      "image_url": "https://d3dwep9z8m8y9r.cloudfront.net/publications/2024/02/publications-10719/thumbnail/44832/Site_1738x800.png",
+      "published_date": "2024-05-09T15:53:43.577Z",
+      "topics": [
+        1,
+        11,
+        6
+      ],
+      "publishers": [
+        1
+      ]
+    }
+  },
+  {
+    "model": "newspaper.newspaper",
+    "pk": 10,
+    "fields": {
+      "title": "Join the CS2 Challenge in NAVI Discord",
+      "content": "We continue to develop our Discord community and want to determine the best aimer among fans. The top three players will receive NAVI Jersey 2023.\r\n\r\n#NAVINATION Target Challenge will take place on the aim_botz map in CS2. To take part, join the NAVI Discord server. Add the map to your Steam Workshop Favorites, launch it, and select \"Mode #1 100 kills 90\". Click on start and then everything is simple: the faster you destroy 100 bots, the higher your place in the ranking.\r\n\r\nDon't forget about a few important things: a screenshot of the result must be shared on a dedicated server channel, and only M4A4, M4A1-S, and AK-47 can be used.\r\n\r\nThe ten best players of the first stage will advance to the finals, where prizes from NAVI will be awarded. The first stage will last 14 days, so there is not much time, good luck!",
+      "image_url": "https://d3dwep9z8m8y9r.cloudfront.net/media/2024/04/media-222/medium/46344/1630x580-ws-banner.png",
+      "published_date": "2024-05-09T15:55:02.031Z",
+      "topics": [
+        1,
+        11,
+        6
+      ],
+      "publishers": [
+        2,
+        3
+      ]
+    }
+  }
+]
