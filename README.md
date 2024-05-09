@@ -84,8 +84,8 @@ If you want to contribute to the project, please follow these steps:
 
 ## 🔗 Links
 Additional links:
-- Django documentation: https://docs.djangoproject.com/en/3.2/ -
-- Django tutorial: https://docs.djangoproject.com/en/3.2/intro/tutorial01/ -
-- SQLite documentation: https://www.sqlite.org/docs.html -
+- Django documentation: https://docs.djangoproject.com/en/3.2/
+- Django tutorial: https://docs.djangoproject.com/en/3.2/intro/tutorial01/
+- SQLite documentation: https://www.sqlite.org/docs.html
 
 ## 😋 _Enjoy it!_
