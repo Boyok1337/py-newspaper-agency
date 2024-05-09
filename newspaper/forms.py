@@ -24,6 +24,11 @@ class NewspaperForm(forms.ModelForm):
         widget=forms.CheckboxSelectMultiple,
         label="Choose a publishers"
     )
+    topics = forms.ModelMultipleChoiceField(
+        queryset=Topic.objects.all(),
+        widget=forms.CheckboxSelectMultiple,
+        label="Choose a topic"
+    )
 
     class Meta:
         model = Newspaper

@@ -1,6 +1,6 @@
 from django.contrib.auth import login
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.db.models import Q
-from django.http import JsonResponse
 from django.shortcuts import render, redirect
 from django.urls import reverse_lazy
 from django.views import generic
@@ -70,13 +70,13 @@ class PostsListView(generic.ListView):
     paginate_by = 8
 
 
-class PostsCreateView(generic.CreateView):
+class PostsCreateView(LoginRequiredMixin, generic.CreateView):
     model = Newspaper
     form_class = NewspaperForm
     success_url = reverse_lazy("newspaper:posts-list")
 
 
-class PostsUpdateView(generic.UpdateView):
+class PostsUpdateView(LoginRequiredMixin, generic.UpdateView):
     model = Newspaper
     form_class = NewspaperForm
 
@@ -85,7 +85,7 @@ class PostsUpdateView(generic.UpdateView):
         return reverse_lazy("newspaper:posts-detail", kwargs={"pk": pk})
 
 
-class PostsDeleteView(generic.DeleteView):
+class PostsDeleteView(LoginRequiredMixin, generic.DeleteView):
     model = Newspaper
     success_url = reverse_lazy("newspaper:posts-list")
 
@@ -99,7 +99,7 @@ class TopicsListView(generic.ListView):
     paginate_by = 8
 
 
-class TopicsCreateView(generic.CreateView):
+class TopicsCreateView(LoginRequiredMixin, generic.CreateView):
     model = Topic
     form_class = TopicForm
     success_url = reverse_lazy("newspaper:topic-list")
@@ -113,7 +113,7 @@ class TopicsCreateView(generic.CreateView):
         return responce
 
 
-class TopicsUpdateView(generic.UpdateView):
+class TopicsUpdateView(LoginRequiredMixin, generic.UpdateView):
     model = Topic
     form_class = TopicUpdateForm
 
@@ -122,7 +122,7 @@ class TopicsUpdateView(generic.UpdateView):
         return reverse_lazy('newspaper:topic-detail', kwargs={'pk': pk})
 
 
-class TopicsDeleteView(generic.DeleteView):
+class TopicsDeleteView(LoginRequiredMixin, generic.DeleteView):
     model = Topic
     success_url = reverse_lazy("newspaper:topic-list")
 
