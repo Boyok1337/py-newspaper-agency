@@ -76,7 +76,7 @@ python manage.py test
 
 
 ## 📝 Contributing
-- If you want to contribute to the project, please follow these steps: -
+If you want to contribute to the project, please follow these steps:
     1. Fork the repository.
     2. Create a new branch for your feature or bug fix.
     3. Make the necessary changes and commit them.
