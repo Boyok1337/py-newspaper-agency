@@ -144,3 +144,13 @@ def contact_view(request):
 
 def contact_success(request):
     return render(request, 'contact/contact_success.html')
+
+
+def custom_404(request, exception):
+    context = {
+        'title': 'Page not found',
+        'error': f'Not found {request.path}'}
+    return render(request,
+                  '404.html',
+                  context=context,
+                  status=404)
