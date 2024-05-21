@@ -20,7 +20,7 @@ python -m venv venv
 venv\Scripts\activate
  ```
 
- On macOS:
+ On UNIX or macOS:
 ```python
 python3 -m venv venv 
 source venv/bin/activate
@@ -35,7 +35,6 @@ pip install -r requirements.txt
 ### 🗃️ Database setup
 
 ```python
-python manage.py makemigrations
 python manage.py migrate
 ```
 
