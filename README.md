@@ -4,7 +4,7 @@
 # Newspaper
 
 This project was created specifically for a newspaper company. It makes it easy to add posts. Editing and deleting won't be a problem either. The site also has topics for quick filtering of news.
-### ⚡ Live DEMO: [NewspaperAgency](https://github.com/Boyok1337/py-newspaper-agency)
+### ⚡ Live DEMO: [NewspaperAgency](https://newspaper-agency-ihdo.onrender.com/)
 - You can use following superuser (or create another one by yourself):
     - Login: ```qwe```
     - Password: ```qwe```
