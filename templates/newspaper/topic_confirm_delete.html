@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% load crispy_forms_filters %}
+{% block title %}
+  <title>Delete topic | {{ topic.name }}</title>
+{% endblock title %}
+{% load crispy_forms_tags %}
+{% block content %}
+  <div class="mt-7"></div>
+  <h1>Delete topic: {{ topic.name }} ?</h1>
+  <form action="" method="post">
+    {% csrf_token %}
+    <input type="submit" value="Yes" class="btn btn-danger btn-lg">
+  </form>
+{% endblock %}

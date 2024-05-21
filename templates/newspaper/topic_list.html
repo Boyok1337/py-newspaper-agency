@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% block title %}
+  <title>Topics | Page {{ page_obj.number }}</title>
+{% endblock title %}
+{% block content %}
+  <div class="mt-7"></div>
+  <div class="container mt-2">
+    <form method="get" action="{% url 'posts-search' %}" class="mb-3">
+      <div class="input-group">
+        <input type="text" class="form-control" placeholder="Search in topics and posts..." name="q"
+               style="height: 38px;"
+               value="{{ request.GET.q }}">
+        <button class="btn btn-outline-secondary" type="submit" style="height: 38px;">🔍</button>
+        {% if user.is_authenticated and user.is_staff %}
+          <a onclick="window.location.href='{% url 'newspaper:topic-create' %}'" class="btn btn-success">+</a>
+        {% endif %}
+      </div>
+    </form>
+  </div>
+  {% if topic_list %}
+    <div class="row mb-2">
+      {% for topic in topic_list %}
+        <div class="col-md-6">
+          <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+            <div class="col p-4 d-flex flex-column position-static">
+              <h3 class="mb-0">{{ topic.name }}</h3>
+              <p>{{ topic.newspaper_count }} Articles found.</p>
+              {% if topic.newspaper_count > 0 %}
+                <ul>
+                  {% for newspaper in topic.newspaper.all|slice:":5" %}
+                    <li>{{ newspaper.title|truncatewords:5 }}</li>
+                  {% endfor %}
+                </ul>
+              {% endif %}
+              <br>
+              <a href="{% url 'newspaper:topic-detail' topic.pk %}" class="btn btn-outline-dark mb-0 btn-block">
+                VIEW ARTICLES
+              </a>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+    {% if page_obj.has_other_pages %}
+      {% include "includes/pagination.html" with page_obj=page_obj %}
+    {% endif %}
+  {% else %}
+    <div class="container">
+      <p>No topics found.</p>
+    </div>
+  {% endif %}
+{% endblock content %}

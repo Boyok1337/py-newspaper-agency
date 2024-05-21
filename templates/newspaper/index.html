@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="apple-touch-icon" sizes="76x76" href="/static/assets/img/apple-icon.png">
+  <link rel="icon" type="image/png" href="/static/assets/img/favicon.png">
+  <title>Newspaper</title>
+  <!--     Fonts and icons     -->
+  <link rel="stylesheet" type="text/css"
+        href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Slab:400,700"/>
+  <!-- Nucleo Icons -->
+  <link href="/static/assets/css/nucleo-icons.css" rel="stylesheet"/>
+  <link href="/static/assets/css/nucleo-svg.css" rel="stylesheet"/>
+  <!-- Font Awesome Icons -->
+  <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
+  <!-- Material Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+  <!-- CSS Files -->
+  <link id="pagestyle" href="/static/assets/css/material-kit.css?v=3.0.0" rel="stylesheet"/>
+</head>
+<body class="index-page bg-gray-200">
+{% include 'includes/navigation.html' %}
+<header class="header-2">
+  <div class="page-header min-vh-75 relative" style="background-image: url('/static/assets/img/background-index.png')">
+    <span class="mask bg-gradient-primary opacity-6"></span>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-7 text-center mx-auto">
+          <h1 class="text-white pt-3 mt-n5" style="font-size: 5em;">NEWSPAPER</h1>
+          <p class="lead text-white mt-3">
+            Best news in eSports<br/>
+            The fastest news<br/>
+            All insider info and scandals are here!
+          </p>
+          <div class="row text-center py-2 mt-3">
+            <div class="col-12 d-flex justify-content-center">
+              <a href="/posts/"
+                 class="btn bg-gradient-light col-6 me-1 mb-0 d-flex align-items-center justify-content-center"
+                 style="height: 60px;">
+                <div>
+                  <p class="lead text-blue mt-3">GO TO THE NEWS</p>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="card card-body blur shadow-blur mx-3 mx-md-4 mt-n6">
+
+  <section class="pt-3 pb-4" id="count-stats">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-9 mx-auto py-3">
+          <div class="row">
+            <div class="col-md-4 position-relative">
+              <div class="p-3 text-center">
+                <h1 class="text-gradient text-primary">{{ num_posts }}+</h1>
+                <h5 class="mt-3">Unique News</h5>
+                <p class="text-sm font-weight-normal">Anyone can add your own news</p>
+              </div>
+              <hr class="vertical dark">
+            </div>
+            <div class="col-md-4 position-relative">
+              <div class="p-3 text-center">
+                <h1 class="text-gradient text-primary">{{ num_redactors }}+</h1>
+                <h5 class="mt-3">Unique authors</h5>
+                <p class="text-sm font-weight-normal">You can become part of eSports</p>
+              </div>
+              <hr class="vertical dark">
+            </div>
+            <div class="col-md-4">
+              <div class="p-3 text-center">
+                <h1 class="text-gradient text-primary">{{ num_topics }}+</h1>
+                <h5 class="mt-3">Topics</h5>
+                <p class="text-sm font-weight-normal">Find out your own interest</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="my-5 py-5">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-10 ms-auto">
+          <div class="row justify-content-start">
+            <div class="col-md-6">
+              <div class="info">
+                <i class="material-icons text-gradient text-primary text-3xl">flip_to_front</i>
+                <h5 class="font-weight-bolder mt-3">Benefits of use </h5>
+                <p class="pe-5">
+                  1. Get access to <strong>exclusive</strong> interviews, features, and analysis from industry experts.<br>
+                  2. <strong>Discover</strong> new games, teams, and players to follow and support.<br>
+                  3. Have fun and enjoy engaging content <strong>related to your</strong> favorite games and teams.<br>
+                </p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="info">
+                <i class="material-icons text-gradient text-primary text-3xl">flip_to_front</i>
+                <h5 class="font-weight-bolder mt-3">Prize for votes</h5>
+                <p class="pe-3">
+                  Every month we choose author with most popular news.<br>
+                  You can win tour to:<br>
+                  1. The International<br>
+                  2. Major Event<br>
+                  3. RMR tournament
+                </p>
+              </div>
+            </div>
+            <div class="col-md-6">
+                <div class="info">
+                  <i class="material-icons text-gradient text-primary text-3xl">flip_to_front</i>
+                  <h5 class="font-weight-bolder mt-3">Contact US</h5>
+                  <p>You can ask any questions<br>
+                    Send your feedback about using site<br>
+                    Submit your suggestions to improve the site
+                  </p>
+                  <a onclick="window.location.href='{% url "newspaper:contact" %}'" class="btn btn-info">Send your
+                    message</a>
+                </div>
+            </div>
+            <div class="col-md-6">
+              <div class="info">
+                <i class="material-icons text-gradient text-primary text-3xl">flip_to_front</i>
+                <h5 class="font-weight-bolder mt-3">Read more news here</h5>
+                <p class="pe-3">
+                  You can also visit our friends<br>
+                  Enjoy our content<br>
+                  <br>
+                  <a onclick="window.location.href='https://twitter.com/esports'" class="btn btn-info">Twitter</a>
+                  <a onclick="window.location.href='https://www.hltv.org/'" class="btn btn-info">HLTV</a>
+                  <br>
+                  <a onclick="window.location.href='https://www.reddit.com/r/GlobalOffensive/'" class="btn btn-info">Reddit</a>
+                  <a onclick="window.location.href='https://escorenews.com/en'" class="btn btn-info">EnscoreNews</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+</body>
+</html>

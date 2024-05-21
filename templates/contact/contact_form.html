@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load crispy_forms_filters %}
+
+{% block content %}
+  <div class="container mt-5">
+    <div class="mt-7"></div>
+    <h1>Contact Us</h1>
+    <form method="post" novalidate class="mt-4" enctype="multipart/form-data">
+      {% csrf_token %}
+      {{ form|crispy }}
+      <div class="mt-4"></div>
+      <button type="submit" class="btn btn-success">Submit</button>
+    </form>
+  </div>
+  <style>
+      .mt-2-fields {
+          margin-top: 1rem;
+      }
+  </style>
+{% endblock content %}
