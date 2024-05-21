@@ -1,9 +1,11 @@
 from django.contrib.auth.models import AbstractUser
 from django.db import models
 
+from mate_project_news import settings
+
 
 class Redactor(AbstractUser):
-    years_of_experience = models.IntegerField(null=True, blank=True)
+    years_of_experience = models.PositiveSmallIntegerField(null=True, blank=True)
     groups = models.ManyToManyField(
         "auth.Group",
         verbose_name="groups",
@@ -44,7 +46,7 @@ class Newspaper(models.Model):
     image_url = models.URLField(blank=True, null=True)
     published_date = models.DateTimeField(auto_now_add=True)
     topics = models.ManyToManyField(Topic, related_name="newspapers")
-    publishers = models.ManyToManyField(Redactor, related_name="newspapers", blank=True)
+    publishers = models.ManyToManyField(settings.AUTH_USER_MODEL, related_name="newspapers", blank=True)
 
     class Meta:
         ordering = ("-published_date",)
