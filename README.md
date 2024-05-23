@@ -52,6 +52,12 @@ If you want to perform all available features, create a superuser account:
 python manage.py createsuperuser
 ```
 
+### 📝 Set enviroment variable
+- Copy and rename the **.env.sample** file to **.env** 
+- Open the .env file and edit the environment variables 
+- Save the .env file securely 
+- Add the .env file to .gitignore 
+
 ### 🚀 Run the project
 ```python
 python manage.py runserver
