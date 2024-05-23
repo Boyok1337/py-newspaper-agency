@@ -11,7 +11,7 @@ class Redactor(AbstractUser):
         verbose_name="groups",
         blank=True,
         help_text="The groups this user belongs to. A user will get all permissions granted to each of their groups.",
-        related_name="redactor_set",
+        related_name="redactors",
         related_query_name="redactor",
     )
     user_permissions = models.ManyToManyField(
@@ -19,7 +19,7 @@ class Redactor(AbstractUser):
         verbose_name="user permissions",
         blank=True,
         help_text="Specific permissions for this user.",
-        related_name="redactor_set",
+        related_name="redactors",
         related_query_name="redactor",
     )
 
@@ -46,7 +46,9 @@ class Newspaper(models.Model):
     image_url = models.URLField(blank=True, null=True)
     published_date = models.DateTimeField(auto_now_add=True)
     topics = models.ManyToManyField(Topic, related_name="newspapers")
-    publishers = models.ManyToManyField(settings.AUTH_USER_MODEL, related_name="newspapers", blank=True)
+    publishers = models.ManyToManyField(
+        settings.AUTH_USER_MODEL, related_name="newspapers", blank=True
+    )
 
     class Meta:
         ordering = ("-published_date",)
@@ -55,10 +57,7 @@ class Newspaper(models.Model):
         return self.title
 
     def get_publishers(self):
-        return ", ".join(
-            f"{redactor.username}"
-            for redactor in self.publishers.all()
-        )
+        return ", ".join(f"{redactor.username}" for redactor in self.publishers.all())
 
 
 class ContactForm(models.Model):
@@ -68,6 +67,4 @@ class ContactForm(models.Model):
     submitted_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return (f"{self.name} {self.email}"
-                f"{self.message}"
-                f"{self.submitted_at}")
+        return f"{self.name} {self.email}" f"{self.message}" f"{self.submitted_at}"

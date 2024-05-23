@@ -47,10 +47,16 @@ _You can also delete this file if you are not going to use the already prepared 
 
 
 ### 👥 Create a superuser (optional)
-If you want to create a superuser account for accessing the Django admin panel, run:
+If you want to perform all available features, create a superuser account:
 ```python
 python manage.py createsuperuser
 ```
+
+### 📝 Set enviroment variable
+- Copy and rename the **.env.sample** file to **.env** 
+- Open the .env file and edit the environment variables 
+- Save the .env file securely 
+- Add the .env file to .gitignore 
 
 ### 🚀 Run the project
 ```python
