@@ -10,7 +10,8 @@ from newspaper.forms import (
     RegistrationForm,
     TopicForm,
     TopicUpdateForm,
-    NewspaperForm, ContactFormForm,
+    NewspaperForm,
+    ContactFormForm,
 )
 
 
@@ -23,9 +24,7 @@ def register(request):
             return redirect("/")
     else:
         form = RegistrationForm
-        return render(request,
-                      "registration/register.html",
-                      {"form": form})
+        return render(request, "registration/register.html", {"form": form})
 
 
 class PostSearchView(generic.ListView):
@@ -38,15 +37,15 @@ class PostSearchView(generic.ListView):
         if not query:
             return Newspaper.objects.none()
         return Newspaper.objects.filter(
-            Q(title__icontains=query) |
-            Q(content__icontains=query) |
-            Q(topics__name__icontains=query) |
-            Q(publishers__username__icontains=query)
+            Q(title__icontains=query)
+            | Q(content__icontains=query)
+            | Q(topics__name__icontains=query)
+            | Q(publishers__username__icontains=query)
         ).distinct()
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['query'] = self.request.GET.get('q')
+        context["query"] = self.request.GET.get("q")
         return context
 
 
@@ -57,12 +56,10 @@ def index(request):
     context = {
         "num_posts": num_posts,
         "num_redactors": num_redactors,
-        "num_topics": num_topics
+        "num_topics": num_topics,
     }
 
-    return render(
-        request, "newspaper/index.html", context=context
-    )
+    return render(request, "newspaper/index.html", context=context)
 
 
 class PostsListView(generic.ListView):
@@ -118,8 +115,8 @@ class TopicsUpdateView(LoginRequiredMixin, generic.UpdateView):
     form_class = TopicUpdateForm
 
     def get_success_url(self):
-        pk = self.kwargs.get('pk')
-        return reverse_lazy('newspaper:topic-detail', kwargs={'pk': pk})
+        pk = self.kwargs.get("pk")
+        return reverse_lazy("newspaper:topic-detail", kwargs={"pk": pk})
 
 
 class TopicsDeleteView(LoginRequiredMixin, generic.DeleteView):
@@ -132,25 +129,20 @@ class TopicsDetailView(generic.DetailView):
 
 
 def contact_view(request):
-    if request.method == 'POST':
+    if request.method == "POST":
         form = ContactFormForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('newspaper:contact_success')
+            return redirect("newspaper:contact_success")
     else:
         form = ContactFormForm()
-    return render(request, 'contact/contact_form.html', {'form': form})
+    return render(request, "contact/contact_form.html", {"form": form})
 
 
 def contact_success(request):
-    return render(request, 'contact/contact_success.html')
+    return render(request, "contact/contact_success.html")
 
 
 def custom_404(request, exception):
-    context = {
-        'title': 'Page not found',
-        'error': f'Not found {request.path}'}
-    return render(request,
-                  '404.html',
-                  context=context,
-                  status=404)
+    context = {"title": "Page not found", "error": f"Not found {request.path}"}
+    return render(request, "404.html", context=context, status=404)

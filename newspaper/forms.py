@@ -10,24 +10,26 @@ class RegistrationForm(UserCreationForm):
 
     class Meta:
         model = Redactor
-        fields = ["username",
-                  "first_name",
-                  "last_name",
-                  "email",
-                  "password1",
-                  "password2"]
+        fields = [
+            "username",
+            "first_name",
+            "last_name",
+            "email",
+            "password1",
+            "password2",
+        ]
 
 
 class NewspaperForm(forms.ModelForm):
     publishers = forms.ModelMultipleChoiceField(
         queryset=Redactor.objects.all(),
         widget=forms.CheckboxSelectMultiple,
-        label="Choose a publishers"
+        label="Choose a publishers",
     )
     topics = forms.ModelMultipleChoiceField(
         queryset=Topic.objects.all(),
         widget=forms.CheckboxSelectMultiple,
-        label="Choose a topic"
+        label="Choose a topic",
     )
 
     class Meta:
@@ -44,10 +46,12 @@ class TopicForm(forms.ModelForm):
 class TopicUpdateForm(forms.ModelForm):
     class Meta:
         model = Topic
-        fields = ["name", ]
+        fields = [
+            "name",
+        ]
 
 
 class ContactFormForm(forms.ModelForm):
     class Meta:
         model = ContactForm
-        fields = ['name', 'email', 'message']
+        fields = ["name", "email", "message"]

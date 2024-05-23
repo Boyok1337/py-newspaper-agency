@@ -47,7 +47,7 @@ _You can also delete this file if you are not going to use the already prepared 
 
 
 ### 👥 Create a superuser (optional)
-If you want to create a superuser account for accessing the Django admin panel, run:
+If you want to perform all available features, create a superuser account:
 ```python
 python manage.py createsuperuser
 ```
