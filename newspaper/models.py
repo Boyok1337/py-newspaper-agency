@@ -1,7 +1,7 @@
 from django.contrib.auth.models import AbstractUser
 from django.db import models
 
-from mate_project_news import settings
+from project_news import settings
 
 
 class Redactor(AbstractUser):

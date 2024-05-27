@@ -46,7 +46,7 @@ MIDDLEWARE = [
     "newspaper.middleware.PageNotFoundMiddleware",
 ]
 
-ROOT_URLCONF = "mate_project_news.urls"
+ROOT_URLCONF = "project_news.urls"
 
 TEMPLATES = [
     {
@@ -64,7 +64,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = "mate_project_news.wsgi.application"
+WSGI_APPLICATION = "project_news.wsgi.application"
 
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
